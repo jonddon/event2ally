@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
 
-contract Greeter {
+contract Event2ally {
     string private greeting;
 
     constructor(string memory _greeting) {
