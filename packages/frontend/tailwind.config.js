@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        zero: "0rem",
+      },
       spacing: {
         "112": "28rem",
         "128": "32rem",
@@ -27,6 +30,9 @@ module.exports = {
         },
         purple: {
           cpurple: "#F2FFE6",
+        },
+       orange: {
+          corange: "#FF4200",
         },
       },
     },
