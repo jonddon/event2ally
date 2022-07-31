@@ -1,0 +1,12 @@
+{
+    "events":[
+        {"id":"001","name":"Happy Hour", "date":"Sat, July 16, 1:pm", "venue":"Landmark Event Centre", "organizer":"Designers Dao", "cost":"3 Matic", "imgSrc":"/event-card.svg"},
+        {"id":"002","name":"Happy Hour", "date":"Sat, July 16, 1:pm", "venue":"Landmark Event Centre", "organizer":"Designers Dao", "cost":"3 Matic", "imgSrc":"/event-card.svg"},
+        {"id":"003","name":"Happy Hour", "date":"Sat, July 16, 1:pm", "venue":"Landmark Event Centre", "organizer":"Designers Dao", "cost":"3 Matic", "imgSrc":"/event-card.svg"},
+        {"id":"004","name":"Happy Hour", "date":"Sat, July 16, 1:pm", "venue":"Landmark Event Centre", "organizer":"Designers Dao", "cost":"3 Matic", "imgSrc":"/event-card.svg"},
+        {"id":"005","name":"Happy Hour", "date":"Sat, July 16, 1:pm", "venue":"Landmark Event Centre", "organizer":"Designers Dao", "cost":"3 Matic", "imgSrc":"/event-card.svg"},
+        {"id":"006","name":"Happy Hour", "date":"Sat, July 16, 1:pm", "venue":"Landmark Event Centre", "organizer":"Designers Dao", "cost":"3 Matic", "imgSrc":"/event-card.svg"},
+        {"id":"007","name":"Happy Hour", "date":"Sat, July 16, 1:pm", "venue":"Landmark Event Centre", "organizer":"Designers Dao", "cost":"3 Matic", "imgSrc":"/event-card.svg"},
+        {"id":"008","name":"Happy Hour", "date":"Sat, July 16, 1:pm", "venue":"Landmark Event Centre", "organizer":"Designers Dao", "cost":"3 Matic", "imgSrc":"/event-card.svg"}
+    ]
+}
