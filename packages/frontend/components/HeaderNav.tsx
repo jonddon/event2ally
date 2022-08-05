@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "next/link";
 import Image from "next/image"
 
 const HeaderNav = () => {
@@ -13,14 +14,15 @@ const HeaderNav = () => {
           <div className="mx-auto sm:px-6">
             <div className="flex items-center justify-between px-3 py-6 ">
               <div className="flex">
-                <a href="#">
+                <Link href='/'>
+                <a>
                   <span className="sr-only">Workflow</span>
                   <Image src="/logo.svg"
                   height='50'
                   width='50'
-               
                   />
                 </a>
+                </Link>
               </div>
 
               <div className="flex items-center ">
