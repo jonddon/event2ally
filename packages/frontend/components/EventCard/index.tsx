@@ -5,7 +5,6 @@ import { IEventCard } from "types"
 
 
 const EventCard = (props:IEventCard & {className:string}) =>{
-
     const {name, cost, date, venue, organizer, imgSrc, className} = props
 
     return (<>

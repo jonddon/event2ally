@@ -22,16 +22,21 @@ module.exports = {
       }, //end of fontFamily
 
       colors: {
+        gray: {
+          btngray: "#DDDDDD",
+          cgray: "#EDEDED",
+        },
         red: {
           cred: "#EA007E",
         },
         black: {
           c100: "#111111",
+          c200: "#130F26",
         },
         purple: {
           cpurple: "#F2FFE6",
         },
-       orange: {
+        orange: {
           corange: "#FF4200",
         },
       },

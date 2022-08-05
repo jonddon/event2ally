@@ -1,9 +1,9 @@
-// import { useRouter } from 'next/router'
+ import Link from "next/link"
 import EventPageWrapper from "@components/EventPageWrapper"
 
 
 const Event =()=>{
-    // const router = useRouter()
+
     return (<>
     
     <EventPageWrapper>
@@ -11,7 +11,11 @@ const Event =()=>{
         <img src="/event-one.png" className="object-cover w-full h-full"/>     
             </div>
             <div className='w-4/5 mx-auto md:hidden '>
-            <button className='w-full p-3 mx-auto text-xl text-white -translate-y-6 rounded-md bg-red-cred'>Get Ticket</button>
+                    <Link href='/events/checkout'>
+                        <a className='block w-full p-3 mx-auto text-xl text-white -translate-y-6 rounded-md bg-red-cred'>
+                        Get Ticket
+                        </a>
+                    </Link>
             </div>
        <div className='grid grid-cols-1 gap-4 p-3 md:grid-cols-1 lg:grid-cols-2 '>
         
@@ -31,7 +35,12 @@ const Event =()=>{
         </div>
         <div>
         <div className='mx-auto md:max-w-sm'>
-            <button className='items-start justify-center hidden w-full p-3 text-xl text-white -translate-y-10 rounded-md md:flex bg-red-cred'>Get Ticket</button>
+        <Link href='/events/checkout'>
+                        <a className='items-start justify-center hidden w-full p-3 text-xl text-white -translate-y-10 rounded-md md:flex bg-red-cred'>
+                        Get Ticket
+                        </a>
+                    </Link>
+          
             <h1 className='my-2 font-semibold md:my-0 md:pl-3'>Date and Time</h1>
             <ul>
                 <li  className='mb-3'>
