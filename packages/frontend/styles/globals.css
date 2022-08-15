@@ -1,10 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* https://ifonts.xyz/nekst-font.html */
+@font-face {
+  font-family: 'Nekst';
+  src:url('../assets/nekst/Nekst-Regular.otf');
+  /* src:url('../assets/nekst/Nekst-Black.otf'); */
+  /* src:url('../assets/nekst/Nekst-Bold.otf'); */
+  /* src:url('../assets/nekst/Nekst-Light.otf'); */
+  /* src: url('../assets/nekst/Nekst-Medium.otf'); */
+  /* src:url('../assets/nekst/Nekst-SemiBold.otf'); */
+  /* src:url('../assets/nekst/Nekst-Thin.otf'); */
+  font-weight: 400;
+  font-style: normal;
+  }
+@font-face {
+  font-family: 'Nekst-bold';
+  src:url('../assets/nekst/Nekst-Bold.otf');
+  font-style: normal;
+  }
+
+  /***********************
+   BR Firma  Font Family
+  ***********************/
+@font-face {
+  font-family: 'BRFirma';
+  src:url('../assets/br-firma/BRFirma-Regular.ttf');
+  font-style: normal;
+  }
+@font-face {
+  font-family: 'BRFirma-bold';
+  src:url('../assets/br-firma/BRFirma-Bold.ttf');
+  font-style: normal;
+  }
+  
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  background: #F5F5F5;
+  font-family: Nekst, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+
+h1 {
+  font-family: Nekst-bold;
+}
+
+
 
 a {
   color: inherit;
@@ -13,4 +58,57 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+
+/* you need to wrap the component */
+
+.event-card-img > span >span {
+  outline:10px solid blue;
+  border:10px solid yellowgreen;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+}
+
+
+
+
+/* Footer Styles */
+
+/* Tab content - closed */
+.tab-content {
+  max-height: 0;
+  -webkit-transition: max-height 0.35s;
+  -o-transition: max-height 0.35s;
+  transition: max-height 0.35s;
+}
+
+/* :checked - resize to full height */
+.tab input:checked ~ .tab-content {
+  max-height: 100vh;
+}
+
+/* Label formatting when open */
+.tab input:checked + label {
+  border-left-width: 1px; 
+  border-color: white;
+}
+
+/* Icon */
+.tab .label .icon {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  transform-origin: center center;
+}
+
+/* Open Multiple Icon Formatting - Open */
+.tab input[type="checkbox"]:checked + .label .icon {
+  transform: rotate(135deg);
+}
+
+/* List Transition */
+ul a {
+  transition: color 0.5s ease;
 }
