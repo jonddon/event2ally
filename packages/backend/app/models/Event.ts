@@ -1,15 +1,16 @@
 import { Schema, model } from 'mongoose';
 
-enum EventType {
-  Online,
-  Offline,
-  Hybrid
+export enum EventType {
+  Online = "online",
+  Offline = "offline",
+  Hybrid = "hybrid"
 }
 
-enum EventCategory {
-  Meetup,
-  Hangout,
-  Webinar
+export enum EventCategory {
+  Meetup = "meetup",
+  Hangout = "hangout",
+  Webinar = "webinar",
+  Conference = "conference"
 }
 
 interface IEventLocation {
@@ -28,7 +29,7 @@ const EventLocationType = {
   longitude: { type: String, required: true },
 }
 
-interface IEvent {
+export interface IEvent {
   name: string;
   host: string;
   creator: string;
