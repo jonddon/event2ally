@@ -2,6 +2,8 @@ import express, { Request, Response, NextFunction } from 'express';
 import app from './server';
 import logger from './utils/logger';
 import config from './config';
+import errorHandler from './app/http/errors/error.handler';
+import { eventRoutes } from './routes';
 
 
 /**
@@ -45,7 +47,7 @@ async function bootstrap() {
    * Configure routes
    */
   // add API routes
-  // app.use('/v1/api', apiRoute);
+  app.use('/v1/api', eventRoutes);
   // return Status for initial route
   app.get("/", (_: Request, res: Response) => {
     res.status(200).json({ status: 'Online', message: `Online on ${new Date()}` });
@@ -54,7 +56,7 @@ async function bootstrap() {
   /**
    * Configure error handler
    */
-  // errorHandler(app);
+  errorHandler(app);
 }
 
 bootstrap()
