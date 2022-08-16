@@ -1,5 +1,5 @@
 export default {
-	ENV: process.env.NODE_ENV,
+	ENV: process.env.NODE_ENV || 'development',
 	PORT: process.env.PORT || '2332',
   node_version: process.version,
   database: {
