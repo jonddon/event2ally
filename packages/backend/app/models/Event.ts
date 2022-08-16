@@ -1,4 +1,5 @@
 import { Schema, model } from 'mongoose';
+import uniqueValidator from 'mongoose-unique-validator';
 
 export enum EventType {
   Online = "online",
@@ -53,6 +54,7 @@ const eventSchema = new Schema<IEvent>({
   ticket_price: { type: String, required: false },
 });
 
+eventSchema.plugin(uniqueValidator);
 const EventModel = model<IEvent>('Event', eventSchema);
 
 export default EventModel;
