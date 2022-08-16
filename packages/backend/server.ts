@@ -2,7 +2,7 @@ import express from 'express';
 import * as dotenv from 'dotenv';
 dotenv.config();
 
-import logger from './utils/logger';
+import { logger } from './utils/logger';
 import database from './helpers/database';
 import config from './config';
 

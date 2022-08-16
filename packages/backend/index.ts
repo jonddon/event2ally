@@ -1,8 +1,9 @@
 import express, { Request, Response, NextFunction } from 'express';
 import app from './server';
-import logger from './utils/logger';
+import { logger } from './utils/logger';
 import config from './config';
 import errorHandler from './app/http/errors/error.handler';
+import morganMiddleware from './app/http/middlewares/morgan';
 import { eventRoutes } from './routes';
 
 
@@ -39,6 +40,11 @@ async function bootstrap() {
   app.use(express.urlencoded({ extended: true }));
 
   /**
+   * Configure logging middleware
+   */
+  app.use(morganMiddleware);
+
+  /**
    * Host static public directory
    */
   // app.use('/', express.static('public'));
@@ -47,7 +53,7 @@ async function bootstrap() {
    * Configure routes
    */
   // add API routes
-  app.use('/v1/api', eventRoutes);
+  app.use('/api/v1', eventRoutes);
   // return Status for initial route
   app.get("/", (_: Request, res: Response) => {
     res.status(200).json({ status: 'Online', message: `Online on ${new Date()}` });

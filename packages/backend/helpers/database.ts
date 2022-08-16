@@ -1,5 +1,5 @@
 import Mongoose from "mongoose";
-import logger from "../utils/logger";
+import { logger } from "../utils/logger";
     
 class Database {
     static mongooseInstance: any;
@@ -19,12 +19,7 @@ class Database {
         logger.info('MongoDB database connected');
       });
       
-      this.mongooseInstance = await Mongoose.connect(url, {
-      // useNewUrlParser: true,
-      // useUnifiedTopology: true,
-      // useFindAndModify: false,
-      // useCreateIndex: true
-      });
+      this.mongooseInstance = await Mongoose.connect(url);
       return this.mongooseInstance;
     }   
 };
