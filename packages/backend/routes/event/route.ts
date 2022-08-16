@@ -8,8 +8,8 @@ const router = express.Router();
 
 router.post('/new', celebrate(createEventSchema), controllerAsyncWrapper(EventControllerInstance.createEvent));
 
-const authRouter = {
+const eventRouter = {
     baseUrl: '/events',
     router
 };
-export default authRouter;
+export default eventRouter;
